@@ -46,20 +46,27 @@ export default function Home() {
         </header>
 
         {/* GitHub Statistics Section */}
+{/* GitHub Statistics Section */}
         <section className="mb-32">
           <div className="flex items-center gap-4 mb-8">
             <h2 className="text-xl font-bold text-white whitespace-nowrap">Engine Activity</h2>
             <div className="h-[1px] w-full bg-slate-800"></div>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid gap-6">
+            {/* THE GREEN SQUARES CHART */}
+            <div className="w-full p-4 rounded-xl border border-slate-800 bg-[#0f172a] shadow-2xl overflow-hidden">
+                <p className="text-xs font-mono text-slate-500 mb-4 uppercase tracking-widest text-center md:text-left">Contribution Pipeline</p>
+                <img 
+                  src={`https://ghchart.rshah.org/4070ff/${username}`} 
+                  alt="GitHub Contribution Grid" 
+                  className="w-full h-auto brightness-110 contrast-125"
+                />
+            </div>
+            
+            {/* OVERALL STATS CARD */}
             <img 
               src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight&bg_color=0f172a&hide_border=true`} 
               alt="GitHub Stats" 
-              className="w-full rounded-xl border border-slate-800 shadow-2xl"
-            />
-            <img 
-              src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&bg_color=0f172a&hide_border=true`} 
-              alt="Top Languages" 
               className="w-full rounded-xl border border-slate-800 shadow-2xl"
             />
           </div>
